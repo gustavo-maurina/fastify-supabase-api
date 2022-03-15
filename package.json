@@ -1,0 +1,22 @@
+{
+  "name": "supabase-generic-api",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/config/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.21",
+    "nodemon": "2.0.15",
+    "typescript": "4.6.2"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "1.31.1",
+    "ajv-errors": "1",
+    "ajv-i18n": "4.2.0",
+    "ajv-keywords": "5.1.0",
+    "dotenv": "16.0.0",
+    "fastify": "3.27.4"
+  }
+}
