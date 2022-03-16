@@ -29,10 +29,9 @@ export default function (
     "/create-user",
     { schema: schema },
     async (request: FastifyRequest<any>, reply: FastifyReply) => {
-      const { email, password } = request.body;
       const user = await supabase.auth.signUp({
-        email: email,
-        password: password,
+        email: request.body.email,
+        password: request.body.password,
       });
 
       if (!user.error) return reply.send(user);
@@ -40,5 +39,16 @@ export default function (
       reply.code(500).send(user.error);
     }
   );
+
+  fastify.get(
+    "/create-user",
+    async (request: FastifyRequest<any>, reply: FastifyReply) => {
+      const users = await supabase.auth.api.getUser(
+        request.headers["authorization"]
+      );
+      reply.send(users);
+    }
+  );
+
   done();
 }
