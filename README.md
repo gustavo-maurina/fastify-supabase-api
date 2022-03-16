@@ -1,11 +1,11 @@
 # fastify-supabase-api
 
 ## Rodar projeto
-#### Instalar dependências
+Instalar dependências
 ```
 yarn install
 ```
-#### Executar projeto
+Executar projeto
 ```
 yarn dev
 ```
