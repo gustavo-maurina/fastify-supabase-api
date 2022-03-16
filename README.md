@@ -2,6 +2,10 @@
 
 ## Rodar projeto
 #### Instalar dependências
-`yarn install`
+```
+yarn install
+```
 #### Executar projeto
-`yarn dev`
+```
+yarn dev
+```
